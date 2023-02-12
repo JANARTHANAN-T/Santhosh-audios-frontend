@@ -1,12 +1,12 @@
 import { useState } from "react";
-import logo from '../../asserts/logo.png'
+import logo from '../../asserts/images/logo.png'
 
 function Navbar() {
   const [nav, setNav] = useState(false);
   return (
     <nav className="flex justify-between items-center px-5 md:px-10 h-20 bg-indigo-50 shadow-lg">
       <div className="w-full">
-        <img src={logo} className='h-16' />
+        <img src={logo} className='h-16' alt="Santhosh Audios" />
       </div>
       <ul className="hidden font-medium md:flex">
         <li className="p-4 hover:cursor-pointer text-indigo-800 font-bold ">HOME</li>
@@ -38,7 +38,7 @@ function Navbar() {
       <div className="md:hidden">
       <div className={nav?"fixed left-0 top-0 w-[60%] p-5 h-full shadow-lg bg-indigo-50 ease-in-out duration-500":"fixed left-[-100%] top-0 p-5 ease-in w-[60%] duration-500 h-full"}>
         <div className="flex w-full text-xl font-bold">
-        <img src={logo} className='h-12' />
+        <img src={logo} className='h-12' alt="Santhosh Audios" />
         </div>
         <ul className=" py-4">
           <li className="py-3 hover:cursor-pointer hover:text-[#6b78b1]">HOME</li>

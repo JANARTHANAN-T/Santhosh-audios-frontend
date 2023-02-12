@@ -13,7 +13,6 @@ function TopNavBtn() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  console.log(height);
 
   if (height > 500)
     return (

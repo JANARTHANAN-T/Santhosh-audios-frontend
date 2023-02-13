@@ -18,7 +18,8 @@ function TopNavBtn() {
     return (
         <button
           type="button"
-          className="fixed bottom-10 right-8 animate-bounce bg-[#6b78b1] text-white font-bold rounded-full p-2 "
+          className="fixed bottom-10 right-8 animate-bounce bg-gradient-to-r from-[#6b78b1] to-blue-500 text-white font-bold rounded-full p-2"
+          onClick={()=>window.scrollTo({top: 0, behavior: 'smooth'})}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

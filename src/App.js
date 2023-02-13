@@ -1,28 +1,19 @@
 import "./App.css";
-import Home from "./components/Home/Home";
+import {BrowserRouter as Router} from 'react-router-dom'
+import AllRoutes from "./AllRoutes";
 import Navbar from "./components/Navbar/Navbar";
-import TopNavBtn from "./components/TopNavBtn/TopNavBtn";
+import Footer from "./components/Footer/Footer";
+
 
 function App() {
-
   return (
     <div>
-      {/* Navbar */}
+   <Router>
       <Navbar />
-      {/* Home */}
-      <Home />
-      {/* Service */}
+      <AllRoutes />
+      <Footer />
+   </Router>
 
-      {/* Works */}
-
-      {/* Callery */}
-
-      {/* Contact */}
-
-      {/* Footer */}
-
-      {/* Top Navigation btn */}
-      <TopNavBtn />
     </div>
   );
 }

@@ -1,20 +1,25 @@
 import { useState } from "react";
 import logo from '../../asserts/images/logo.png'
+import { NavLink , useLocation} from "react-router-dom";
+import './Navbar.css'
 
 function Navbar() {
+  const location=useLocation();
   const [nav, setNav] = useState(false);
+  const siteRoutes = ['/', '/about', '/service', '/works', '/gallery', '/contact'];
+  if(siteRoutes.includes(location.pathname))
   return (
     <nav className="flex justify-between items-center px-5 md:px-10 h-20 bg-indigo-50 shadow-lg">
       <div className="w-full">
         <img src={logo} className='h-16' alt="Santhosh Audios" />
       </div>
       <ul className="hidden font-medium md:flex">
-        <li className="p-4 hover:cursor-pointer text-indigo-800 font-bold ">HOME</li>
-        <li className="p-4 hover:cursor-pointer hover:text-[#6b78b1]">ABOUT</li>
-        <li className="p-4 hover:cursor-pointer hover:text-[#6b78b1]">SERVICE</li>
-        <li className="p-4 hover:cursor-pointer hover:text-[#6b78b1]">WORKS</li>
-        <li className="p-4 hover:cursor-pointer hover:text-[#6b78b1]">GALLERY</li>
-        <li className="p-4 hover:cursor-pointer hover:text-[#6b78b1]">CONTACT</li>
+        <NavLink to="/" className="p-4 hover:cursor-pointer hover:text-[#6b78b1] ">HOME</NavLink>
+        <NavLink to="/about" className="p-4 hover:cursor-pointer hover:text-[#6b78b1]">ABOUT</NavLink>
+        <NavLink to="/service" className="p-4 hover:cursor-pointer hover:text-[#6b78b1]">SERVICE</NavLink>
+        <NavLink to="/works" className="p-4 hover:cursor-pointer hover:text-[#6b78b1]">WORKS</NavLink>
+        <NavLink to="/gallery" className="p-4 hover:cursor-pointer hover:text-[#6b78b1]">GALLERY</NavLink>
+        <NavLink to="/contact" className="p-4 hover:cursor-pointer hover:text-[#6b78b1]">CONTACT</NavLink>
       </ul>
       {!nav &&
       <div className="md:hidden">
@@ -41,12 +46,12 @@ function Navbar() {
         <img src={logo} className='h-12' alt="Santhosh Audios" />
         </div>
         <ul className=" py-4">
-          <li className="py-3 hover:cursor-pointer hover:text-[#6b78b1]">HOME</li>
-          <li className="py-3 hover:cursor-pointer hover:text-[#6b78b1]">ABOUT</li>
-          <li className="py-3 hover:cursor-pointer hover:text-[#6b78b1]">SERVICE</li>
-          <li className="py-3 hover:cursor-pointer hover:text-[#6b78b1]">WORKS</li>
-          <li className="py-3 hover:cursor-pointer hover:text-[#6b78b1]">GALLERY</li>
-          <li className="py-3 hover:cursor-pointer hover:text-[#6b78b1]">CONTACT</li>
+          <li className="py-3 hover:cursor-pointer hover:text-[#6b78b1]"><NavLink to="/">HOME</NavLink></li>
+          <li className="py-3 hover:cursor-pointer hover:text-[#6b78b1]"><NavLink to="/about">ABOUT</NavLink></li>
+          <li className="py-3 hover:cursor-pointer hover:text-[#6b78b1]"><NavLink to="/service">SERVICE</NavLink></li>
+          <li className="py-3 hover:cursor-pointer hover:text-[#6b78b1]"><NavLink to="/works">WORKS</NavLink></li>
+          <li className="py-3 hover:cursor-pointer hover:text-[#6b78b1]"><NavLink to="/gallery">GALLERY</NavLink></li>
+          <li className="py-3 hover:cursor-pointer hover:text-[#6b78b1]"><NavLink to="/contact">CONTACT</NavLink></li>
         </ul>
         <div className="absolute top-6 right-2" >
           <svg

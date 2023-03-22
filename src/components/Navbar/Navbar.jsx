@@ -6,20 +6,19 @@ import './Navbar.css'
 function Navbar() {
   const location=useLocation();
   const [nav, setNav] = useState(false);
-  const siteRoutes = ['/', '/about', '/service', '/works', '/gallery', '/contact'];
+  const siteRoutes = ['/', '/about', '/service', '/gallery', '/contact'];
   if(siteRoutes.includes(location.pathname))
   return (
-    <nav className="flex justify-between items-center px-5 md:px-10 h-20 bg-indigo-50 shadow-lg">
+    <nav className="flex justify-between items-center px-5 md:px-10 h-20 absolute z-10 w-[100%]  ">
       <div className="w-full">
         <img src={logo} className='h-16' alt="Santhosh Audios" />
       </div>
       <ul className="hidden font-medium md:flex">
-        <NavLink to="/" className="p-4 hover:cursor-pointer hover:text-[#6b78b1] ">HOME</NavLink>
-        <NavLink to="/about" className="p-4 hover:cursor-pointer hover:text-[#6b78b1]">ABOUT</NavLink>
-        <NavLink to="/service" className="p-4 hover:cursor-pointer hover:text-[#6b78b1]">SERVICE</NavLink>
-        <NavLink to="/works" className="p-4 hover:cursor-pointer hover:text-[#6b78b1]">WORKS</NavLink>
-        <NavLink to="/gallery" className="p-4 hover:cursor-pointer hover:text-[#6b78b1]">GALLERY</NavLink>
-        <NavLink to="/contact" className="p-4 hover:cursor-pointer hover:text-[#6b78b1]">CONTACT</NavLink>
+        <NavLink to="/" className="p-4 hover:cursor-pointer hover:text-white ">HOME</NavLink>
+        <NavLink to="/about" className="p-4 hover:cursor-pointer hover:text-white ">ABOUT</NavLink>
+        <NavLink to="/service" className="p-4 hover:cursor-pointer hover:text-white ">SERVICE</NavLink>
+        <NavLink to="/gallery" className="p-4 hover:cursor-pointer hover:text-white ">GALLERY</NavLink>
+        <NavLink to="/contact" className="p-4 hover:cursor-pointer hover:text-white ">CONTACT</NavLink>
       </ul>
       {!nav &&
       <div className="md:hidden">

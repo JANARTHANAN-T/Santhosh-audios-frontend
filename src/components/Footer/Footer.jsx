@@ -4,31 +4,33 @@ import logo from "../../asserts/images/logo.png";
 function Footer() {
   return (
     <div className="bg-indigo-50">
-      <div className=" flex justify-around py-5 border-gray-300 border-b-2">
-        <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-around py-5 border-gray-300 border-b-2">
+        <div className="flex items-center justify-start">
           <img src={logo} className="h-24" alt="Santhosh Audios" />
         </div>
         <div>
           <div className="text-xl font-md ">Links</div>
-          <ul className="my-2">
-            <li className="font-thin text-lg">home</li>
-            <li className="font-thin text-lg">about</li>
-            <li className="font-thin text-lg">service</li>
-            <li className="font-thin text-lg">gallery</li>
-            <li className="font-thin text-lg">contact</li>
+          <ul className="my-2 flex md:flex-col md:items-start items-center justify-center">
+            <li className="font-thin text-lg mx-2">home</li>
+            <li className="font-thin text-lg mx-2">about</li>
+            <li className="font-thin text-lg mx-2">service</li>
+            <li className="font-thin text-lg mx-2">gallery</li>
+            <li className="font-thin text-lg mx-2">contact</li>
           </ul>
         </div>
+        <div className="flex items-center justify-start">
         <div>
           <div className="text-xl font-md ">Address</div>
           <pre className="my-2">
-            20/29,Masimalai Street,
+            SANTHOSH AUDIOS,
             <br />
-            Veerappan Chattram,
+            307/2, Perundurai Road,
             <br />
-            Cauvery Road,
+            Near URC Nagar State Bank,
             <br />
-            Erode.
+            Erode - 638012.
           </pre>
+        </div>
         </div>
         <div>
           <div className="text-xl font-md">Follow Us On</div>

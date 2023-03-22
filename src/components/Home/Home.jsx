@@ -34,7 +34,7 @@ function Home() {
             <div className="font-medium text-6xl pt-24 lg:pt-0  py-7 text-center text-indigo-900">
               Santhosh Audios
             </div>
-            <div className="flex justify-start px-5 md:px-0">
+            <div className="flex justify-center px-5 md:px-0">
               <div>
                 <div className="flex pt-7">
                   <svg

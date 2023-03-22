@@ -24,12 +24,12 @@ function Home() {
         <motion.div className="flex justify-center items-center pt-11 hidden lg:block " animate={{x:0,scale:1}} initial={{x:-100}} transition={{type:"spring"}}>
           <img
             src={image}
-            className="animate-pulse  h-100 cursor-pointer"
+            className="animate-pulse  h-100 cursor-pointer drop-shadow-2xl"
             alt={"Banner"+index}
             onClick={updateImage}
           />
         </motion.div>
-        <motion.div className="text-white flex justify-center lg:justify-start relative z-10 p-11" animate={{x:0}} initial={{x:100}} transition={{type:"spring"}}>
+        <motion.div className="text-white flex justify-center lg:justify-start relative z-1" animate={{x:0}} initial={{x:100}} transition={{type:"spring"}}>
           <div>
             <div className="font-medium text-6xl pt-24 lg:pt-0  py-7 text-center text-indigo-900">
               Santhosh Audios

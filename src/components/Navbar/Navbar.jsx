@@ -9,7 +9,7 @@ function Navbar() {
   const siteRoutes = ['/', '/about', '/service', '/gallery', '/contact'];
   if(siteRoutes.includes(location.pathname))
   return (
-    <nav className="flex justify-between items-center px-5 md:px-10 h-20 absolute z-10 w-[100%]  ">
+    <nav className="flex justify-between items-center bg-indigo-50 px-5 md:px-10 h-20 absolute z-10 w-[100%]  ">
       <div className="w-full">
         <img src={logo} className='h-16' alt="Santhosh Audios" />
       </div>

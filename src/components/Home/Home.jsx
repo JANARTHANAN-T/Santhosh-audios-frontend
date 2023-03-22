@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import Banner1 from "../../asserts/images/banner1.png";
 import Banner2 from "../../asserts/images/banner2.png";
@@ -10,7 +10,7 @@ function Home() {
   const [index,setIndex]=useState(0)
   const [image,setImage]=useState(Banner2)
   const updateImage=()=>{
-    if(index==1){
+    if(index===1){
       setIndex(0)
     }else{
       setIndex(index+1)

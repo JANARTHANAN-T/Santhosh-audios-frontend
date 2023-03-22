@@ -7,7 +7,7 @@ function Home() {
     <div className="bg-gradient-to-r from-sky-500 to-indigo-500 h-[65vh] pt-16 px-5">
       <div className="grid grid-cols-1 lg:grid-cols-2 flex items-center">
         <div className="flex justify-center items-center pt-11 hidden lg:block ">
-          <img src={Banner} className="animate-pulse pl-16 h-100" alt="banner-image" />
+          <img src={Banner} className="animate-pulse pl-16 h-100" alt="banner" />
         </div>
         <div className="text-white flex justify-center lg:justify-start relative z-1 ">
         <div>

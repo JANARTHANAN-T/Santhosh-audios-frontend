@@ -1,9 +1,8 @@
 import Home from "../../components/Home/Home";
 import Service from "../../components/Service/Service";
-import Works from "../../components/Works/Works";
 import ContactQuick from "../../components/ContactQuick/ContactQuick";
 import TopNavBtn from "../../components/TopNavBtn/TopNavBtn";
-import Gallery from "../Gallery/Gallery"
+
 
 function LandingPage() {
   return (

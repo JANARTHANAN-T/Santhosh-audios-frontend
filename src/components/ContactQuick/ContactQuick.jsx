@@ -2,7 +2,7 @@ import React from 'react'
 
 function ContactQuick() {
   return (
-    <div>ContactQuick</div>
+    <div></div>
   )
 }
 

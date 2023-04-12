@@ -19,6 +19,9 @@ function Home() {
     console.log(index);
   }
 
+  // setInterval(() => {
+  //   updateImage()
+  // }, 4000);
   
   return (
     <div className="bg-gradient-to-r from-[#91D8E4] to-[#82AAE3] h-[65vh] pt-16 px-5">

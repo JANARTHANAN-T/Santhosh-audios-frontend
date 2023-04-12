@@ -6,7 +6,7 @@ function Footer() {
     <div className="bg-indigo-50">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-around py-5 border-gray-300 border-b-2">
         <div className="flex items-center justify-start">
-          <img src={logo} className="h-24" alt="Santhosh Audios" />
+          <img src={logo} className="h-20" alt="Santhosh Audios" />
         </div>
         <div>
           <div className="text-xl font-md ">Links</div>

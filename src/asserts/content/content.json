@@ -1,0 +1,20 @@
+{
+    "Home":{
+        "Title":"Santhosh Audios",
+        "Quotes":["It takes months","to find customer","Seconds to lose"]
+    },
+    "About":{
+        "AboutUs":"Santhosh Audios is established in the year 2005,which acts as one-stop destination servicing customers both local and from other parts of Erode.The belief that customer satisfaction is an important as their products and services,have helped this establishment garner a vast base of customers,which continues to grow day by day.",
+        "Mission":" Ensuring a positive customer experience, making available goods and/or services that are of top-notch quality.",
+        "Vision":" The company’s mission is to provide “exceptional service” and quality products to its customers at a fair price."
+    },
+    "Services":[{"Title":"Car Audios","Description":""},{"Title":"Car Accessories","Description":""},{"Title":"Home Audios","Description":""},{"Title":"Van/Bus Audios","Description":""},{"Title":"Vam/Bus Tour Lighting","Description":""},{"Title":"All other audio system services","Description":""}],
+    "Contact":{
+        "Email":"",
+        "WhatsApp":"",
+        "Instagram":"",
+        "Address-street":"307/2, Perundurai Road,",
+        "Address-area":"Near URC Nagar State Bank,",
+        "Address-district":"Erode - 638012."
+    }
+}

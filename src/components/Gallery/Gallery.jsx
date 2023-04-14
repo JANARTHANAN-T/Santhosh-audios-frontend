@@ -49,7 +49,7 @@ function Gallery() {
   }
 
   return (
-    <div className="container my-10">
+    <div className="container">
     <div className='text-center text-4xl font-semibold text-[#312e81] mb-20 '>Our Gallery</div>
     <div className="coverflow" ref={el}>
       {images.map((it,index)=>{

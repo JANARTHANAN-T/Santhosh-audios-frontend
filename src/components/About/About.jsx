@@ -2,7 +2,7 @@ import React from "react";
 // import './About.css'
 function About() {
   return (
-    <div className="relative -top-36">
+    <div className="relative md:-top-28">
       {/* <div class="about-section">
             <div class="inner-container">
                 <h1>About Us</h1>
@@ -28,7 +28,7 @@ function About() {
             </div>
         </div> */}
       <div className="grid grid-col-1 md:grid-cols-2">
-        <div className="flex justify-center items-center">
+        <div className="justify-center items-center hidden md:flex">
             <div>company image</div>
         </div>
         

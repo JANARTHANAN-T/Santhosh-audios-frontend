@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Home.css";
 import Banner1 from "../../asserts/images/banner1.png";
 import Banner2 from "../../asserts/images/banner2.png";
 import { motion} from "framer-motion";
@@ -24,7 +23,7 @@ function Home() {
   // }, 4000);
   
   return (
-    <div className="bg-gradient-to-r from-[#91D8E4] to-[#82AAE3] h-[65vh] pt-16 px-5">
+    <div className="bg-gradient-to-r from-[#91D8E4] to-[#82AAE3] h-[65vh] pt-16 px-5 h-[70vh]">
       <div className="grid grid-cols-1 lg:grid-cols-2 flex items-center">
         <motion.div className="flex justify-center items-center pt-11 hidden lg:block " animate={{x:0,scale:1}} initial={{x:-100}} transition={{type:"spring"}}>
           <img

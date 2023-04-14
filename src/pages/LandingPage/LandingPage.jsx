@@ -2,7 +2,7 @@ import Home from "../../components/Home/Home";
 import Service from "../../components/Service/Service";
 import ContactQuick from "../../components/ContactQuick/ContactQuick";
 import TopNavBtn from "../../components/TopNavBtn/TopNavBtn";
-import Gallery from "../Gallery/Gallery"
+import Gallery from "../../components/Gallery/Gallery"
 import About from "../../components/About/About"
 import Navbar from "../../components/Navbar/Navbar";
 import { useState, useEffect } from "react";

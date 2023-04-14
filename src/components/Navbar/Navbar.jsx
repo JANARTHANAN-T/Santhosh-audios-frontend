@@ -9,7 +9,7 @@ import { motion, useScroll} from "framer-motion";
 function Navbar({floatingNav}) {
   const location=useLocation();
   const [nav, setNav] = useState(false);
-  const siteRoutes = ['/', '/about', '/service', '/gallery', '/contact'];
+  const siteRoutes = ['/'];
   const { scrollYProgress } = useScroll();
 
   if(siteRoutes.includes(location.pathname) && !floatingNav)
@@ -75,16 +75,14 @@ function Navbar({floatingNav}) {
           </svg>
         </div>
       </div>
-
       </div>
     </nav>
-    {/* <motion.div className="absoute z-50 h-1 bg-[#312e81]"  style={{ scaleX:scrollYProgress,transformOrigin:"0%" }} /> */}
     </div>
   )
-  if(siteRoutes.includes(location.pathname) && floatingNav)
+  if(floatingNav)
   return(
-    <div className="fixed z-10 w-[100%] ">
-    <nav className="flex justify-between items-center px-5 md:px-10 h-20 bg-slate-100 shadow-lg    ">
+    <div className="fixed z-10 w-[100%]  ">
+    <nav className={!siteRoutes.includes(location.pathname) ? "flex justify-between items-center px-5 md:px-10 h-20 bg-slate-100 shadow-lg" : "md:flex hidden justify-between items-center px-5 md:px-10 h-20 bg-slate-100 shadow-lg "}>
       <div className="w-full">
         <img src={logo} className='h-16' alt="Santhosh Audios" />
       </div>

@@ -1,9 +1,11 @@
 import React from 'react'
 import {Routes,  Route} from 'react-router-dom'
 import Contact from './pages/Contact/Contact'
-import Gallery from './pages/Gallery/Gallery'
 import LandingPage from './pages/LandingPage/LandingPage'
 import PageNotFound from './pages/PageNotFound/PageNotFound'
+import AboutPage from './pages/AboutPage/AboutPage'
+import ServicePage from './pages/ServicePage/ServicePage'
+import GalleryPage from './pages/GalleryPage/GalleryPage'
 
 
 
@@ -11,11 +13,10 @@ function AllRoutes() {
   return (
     <Routes>
         <Route path='/' element={<LandingPage />} />
-        <Route path='/about' element={<LandingPage />} />
-        <Route path='/service' element={<LandingPage />} />
-        <Route path='/works' element={<LandingPage />} />
-        <Route path='/gallery' element={<LandingPage />} />
-        <Route path='/contact' element={<LandingPage />} />
+        <Route path='/about' element={<AboutPage /> } />
+        <Route path='/service' element={<ServicePage />} />
+        <Route path='/gallery' element={<GalleryPage />} />
+        <Route path='/contact' element={<Contact />} />
         <Route path='*' element={<PageNotFound />} />
     </Routes>  
   )

@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../asserts/images/logo.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -12,11 +13,11 @@ function Footer() {
         <div className="">
           <div className="text-xl font-md text-center ">Links</div>
           <ul className="my-5 flex  items-center">
-            <li className="font-thin text-lg mx-2">home</li>
-            <li className="font-thin text-lg mx-2">about</li>
-            <li className="font-thin text-lg mx-2">service</li>
-            <li className="font-thin text-lg mx-2">gallery</li>
-            <li className="font-thin text-lg mx-2">contact</li>
+            <Link to='/' className="font-thin text-lg mx-2">home</Link>
+            <Link to='/about' className="font-thin text-lg mx-2">about</Link>
+            <Link to='/service' className="font-thin text-lg mx-2">service</Link>
+            <Link to='/gallery' className="font-thin text-lg mx-2">gallery</Link>
+            <Link to='/contact' className="font-thin text-lg mx-2">contact</Link>
           </ul>
         </div>
         </div>

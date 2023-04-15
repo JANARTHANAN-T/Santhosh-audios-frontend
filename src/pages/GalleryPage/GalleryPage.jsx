@@ -13,6 +13,7 @@ function GalleryPage() {
   return (
     <div>
     <Navbar floatingNav />
+    <img src='https://drive.google.com/uc?id=14_-T5oM74D9xSmKoULVC_daxEtE_88DX' alt='noimg'/>
     <div className='pt-24 flex justify-center grid lg:grid-cols-6 md: grid-cols-3  snap-mandatory'>
         <button className='rounded-full border-2 border-[#312e81] px-4 py-2 hover:bg-[#312e81] text-[#312e81] font-semibold hover:text-white md:m-6 m-2'>Car Audios</button>
         <button className='rounded-full border-2 border-[#312e81] px-4 py-2 hover:bg-[#312e81] text-[#312e81] font-semibold hover:text-white md:m-6 m-2'>Car Accessories</button>

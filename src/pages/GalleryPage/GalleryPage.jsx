@@ -4,7 +4,7 @@ import TopNavBtn from '../../components/TopNavBtn/TopNavBtn'
 import axios from 'axios'
 function GalleryPage() {
 
-  var data=fetch('https://script.google.com/macros/s/AKfycbx8LmqtHUIkf__2hQBkn-3LDZCjbudbymogs4unYAcUmucTmKq1BH1K2yGMOVojaLx-/exec')
+  var data=fetch('https://script.google.com/macros/s/AKfycbzlqWK52qdKLZ1C1XOq5GXbvGYA5Dj99XRpwza8n6E6-gf80bgQoWqPzeaAdhpqMnh_/exec')
     data.then((value)=>{
       console.log(value);
     }).catch((err)=>{

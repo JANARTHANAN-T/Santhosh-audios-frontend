@@ -8,6 +8,7 @@ function Home() {
   var images=[Banner1,Banner2]
   const [index,setIndex]=useState(0)
   const [image,setImage]=useState(Banner2)
+
   const updateImage=()=>{
     if(index===1){
       setIndex(0)

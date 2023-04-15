@@ -16,7 +16,7 @@ function ContactQuick() {
               >
                 <path
                   fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)"
-                  fill-opacity=".3"
+                  fillOpacity=".3"
                   d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
                 />
                 <defs>
@@ -28,8 +28,8 @@ function ContactQuick() {
                     y2="474.645"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#9089FC" />
-                    <stop offset="1" stop-color="#FF80B5" />
+                    <stop stopColor="#9089FC" />
+                    <stop offset="1" stopColor="#FF80B5" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -46,7 +46,7 @@ function ContactQuick() {
               <div className="grid grid-cols-1 gap-y-6 gap-x-8 sm:grid-cols-2">
                 <div>
                   <label
-                    for="first-name"
+                    htmlFor="first-name"
                     className="block text-sm font-semibold leading-6 text-gray-900"
                   >
                     Name
@@ -56,14 +56,13 @@ function ContactQuick() {
                       type="text"
                       name="first-name"
                       id="first-name"
-                      autocomplete="given-name"
                       className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
                 <div>
                   <label
-                    for="email"
+                    htmlFor="email"
                     className="block text-sm font-semibold leading-6 text-gray-900"
                   >
                     Email
@@ -73,14 +72,13 @@ function ContactQuick() {
                       type="email"
                       name="email"
                       id="email"
-                      autocomplete="email"
                       className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
                 <div className="sm:col-span-2">
                   <label
-                    for="phone-number"
+                    htmlFor="phone-number"
                     className="block text-sm font-semibold leading-6 text-gray-900"
                   >
                     Phone number
@@ -90,14 +88,13 @@ function ContactQuick() {
                       type="tel"
                       name="phone-number"
                       id="phone-number"
-                      autocomplete="tel"
                       className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
                 <div className="sm:col-span-2">
                   <label
-                    for="message"
+                    htmlFor="message"
                     className="block text-sm font-semibold leading-6 text-gray-900"
                   >
                     Message
@@ -125,7 +122,7 @@ function ContactQuick() {
         </div>
         <div className="grid grid-cols-1">
           <div className="m-6 mb-0 p-6">
-            <p class="font-semibold tracking-tight text-gray-900 sm:text-3xl mb-10">
+            <p className="font-semibold tracking-tight text-gray-900 sm:text-3xl mb-10">
               React us on
             </p>
             <div className="grid grid-cols-3 gap-10 items-center">
@@ -138,9 +135,8 @@ function ContactQuick() {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.1265470796543!2d77.68657821428512!3d11.325459991950417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba96f529f11b96f%3A0xb31d9d7ff4ac1510!2sSanthosh%20audios!5e0!3m2!1sen!2sin!4v1679814813649!5m2!1sen!2sin"
               className="h-[100%] w-[100%]"
-              allowfullscreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              title="location"
             ></iframe>
           </div>
         </div>

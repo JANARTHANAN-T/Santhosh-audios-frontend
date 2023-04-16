@@ -51,7 +51,7 @@ function GalleryPage() {
         })}
       </div>
       {(category.length===0 && images?.length!==0) &&
-      <div className="flex justify-center items-center m-10 mb-0 h-52 border-2 rounded-md border-slate-700">Select the Category</div>
+      <div className="flex justify-center items-center m-10 mb-0 h-52 border-2 rounded-md border-slate-400">Select the Category</div>
       }
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 p-10">
         {category?.map((ele, index) => {

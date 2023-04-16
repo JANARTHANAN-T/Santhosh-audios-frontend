@@ -94,7 +94,7 @@ function Gallery() {
           className="animate-pulse  text-xl text-blue-600 font-bold my-5 rounded-md"
           onClick={()=>window.scrollTo({top: 0, behavior: 'smooth'})}
         >
-        more {">"}
+        Explore {">"}
         </Link>
       </div>
     }

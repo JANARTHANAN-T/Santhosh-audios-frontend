@@ -8,6 +8,8 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 function GalleryPage() {
   const [images, setImages] = useState([]);
   const [category, setCategory] = useState([]);
+  const [showImage, setShowImage] = useState(false);
+  const [selectedImage, setSelectedImage] = useState('');
 
   useEffect(() => {
     const getImage = async () => {
@@ -24,6 +26,7 @@ function GalleryPage() {
     };
     getImage();
   });
+
   return (
     <div>
       <Navbar floatingNav />
@@ -62,10 +65,23 @@ function GalleryPage() {
               alt="Image Alt"
               key={index}
               // effect="blur"
+              className="cursor-pointer"
+              onClick={()=>{
+                setSelectedImage(`https://drive.google.com/uc?id=${ele}`)
+                setShowImage(true)
+                }
+              }
             />
           );
         })}
       </div>
+      {showImage &&
+      <div className="h-screen w-full fixed top-0 z-10 flex justify-center items-center bg-[rgba(0,0,0,0.7)]">
+      <div className="absolute top-2 right-2 bg-red-500 px-2 py-1 text-white cursor-pointer" onClick={()=>setShowImage(false)}>x</div>
+      <img src={selectedImage} className="h-[90vh]" alt="preview" />      
+      </div>
+      }
+      
 
       <TopNavBtn />
     </div>

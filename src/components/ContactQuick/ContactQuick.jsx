@@ -5,7 +5,7 @@ import gmail from '../../asserts/images/gmail.png'
 
 function ContactQuick() {
   return (
-    <div>
+    <div className="mt-12">
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="drop-shadow-md">
           <div className=" bg-white p-6 m-6">

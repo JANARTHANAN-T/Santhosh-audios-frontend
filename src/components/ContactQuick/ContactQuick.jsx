@@ -1,11 +1,48 @@
-import React from "react";
+import React,{useState} from "react";
 import whatsapp from '../../asserts/images/whatsapp.png'
 import instagram from '../../asserts/images/instagram.png'
 import gmail from '../../asserts/images/gmail.png'
+import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+
 
 function ContactQuick() {
+  const [name,setName]=useState('')
+  const [email,setEmail]=useState('')
+  const [mobile,setMobile]=useState('')
+  const [message,setMessage]=useState('')
+
+  const onSubmit=async(e)=>{
+    e.preventDefault()
+    if(email===''&& name==="" && mobile==='' && message===''){
+      toast('All fields are mandatory')
+      return ;
+    }
+
+    await axios({
+        method: 'post',
+        url: 'http://192.168.163.146:5000/message',
+        data:{name,email,phonenumber:mobile,message},
+      }).then(async(response) => {
+        if(response.data.status){
+          try {
+            toast('Your message sent successfully...')
+            setEmail('')
+            setName('')
+            setMessage('')
+            setMobile('')
+          } catch (error) {
+            toast("Something went wrong, please try again!")
+          }
+        }else{
+          toast(response.data.msg)
+        }
+      });
+  }
+
   return (
-    <div>
+    <div className="mt-12">
+    <ToastContainer className="mt-20"/>
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="drop-shadow-md">
           <div className=" bg-white p-6 m-6">
@@ -56,6 +93,8 @@ function ContactQuick() {
                       type="text"
                       name="first-name"
                       id="first-name"
+                      value={name}
+                      onChange={(e)=>setName(e.target.value)}
                       className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
@@ -72,6 +111,8 @@ function ContactQuick() {
                       type="email"
                       name="email"
                       id="email"
+                      value={email}
+                      onChange={(e)=>setEmail(e.target.value)}
                       className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
@@ -88,6 +129,8 @@ function ContactQuick() {
                       type="tel"
                       name="phone-number"
                       id="phone-number"
+                      value={mobile}
+                      onChange={(e)=>setMobile(e.target.value)}
                       className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
@@ -104,14 +147,19 @@ function ContactQuick() {
                       name="message"
                       id="message"
                       rows="4"
+                      value={message}
+                      onChange={(e)=>setMessage(e.target.value)}
                       className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    ></textarea>
+                    >
+                   
+                    </textarea>
                   </div>
                 </div>
               </div>
               <div className="mt-10">
                 <button
-                  type="submit"
+                 onClick={onSubmit}
+
                   className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Let's talk
@@ -126,9 +174,9 @@ function ContactQuick() {
               React us on
             </p>
             <div className="grid grid-cols-3 gap-10 items-center">
-            <div className="lg:p-6 border hover:drop-shadow-xl hover:scale-105 transition-transform duration-200 flex justify-center"><img src={gmail} alt="gmail" className="h-16" /></div>
-            <div className="lg:p-6 border hover:drop-shadow-xl hover:scale-105 transition-transform duration-200 flex justify-center"><img src={whatsapp} alt="whatsapp" className="h-16" /></div>
-            <div className="lg:p-6 border hover:drop-shadow-xl hover:scale-105 transition-transform duration-200 flex justify-center"><img src={instagram} alt="instagram" className=" h-16 " /></div>
+            <a href = "mailto: santhoshaudios@gmail.com" target="_blank" rel="noreferrer"  className="lg:p-6 border hover:drop-shadow-xl hover:scale-105 transition-transform duration-200 flex justify-center"><img src={gmail} alt="gmail" className="h-16" /></a>
+            <a href="https://wa.me/+919976208183" target="_blank" rel="noopener noreferrer" className="lg:p-6 border hover:drop-shadow-xl hover:scale-105 transition-transform duration-200 flex justify-center"><img src={whatsapp} alt="whatsapp" className="h-16" /></a>
+            <a href="https://www.instagram.com/santhosh_audios/" target="_blank" rel="noreferrer" className="lg:p-6 border hover:drop-shadow-xl hover:scale-105 transition-transform duration-200 flex justify-center"><img src={instagram} alt="instagram" className=" h-16 " /></a>
             </div>
           </div>
           <div className="m-6 mt-0 row-span-3">

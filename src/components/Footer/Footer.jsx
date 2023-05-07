@@ -7,17 +7,19 @@ function Footer({data}) {
     <div className="bg-indigo-50">
       <div className="grid grid-cols-1 lg:grid-cols-3 justify-between items-center py-5 border-gray-300 border-b-2">
         <div className="flex items-center justify-center md:my-10 mt-10">
+        <a href="https://santhoshaudios.in/">
           <img src={logo} className="h-20" alt="Santhosh Audios" />
+        </a>
         </div>
         <div className="justify-center flex md:my-10 mt-10">
         <div className="">
           <div className="text-xl font-md text-center ">Links</div>
           <ul className="my-5 flex  items-center">
-            <Link to='/' className="font-thin text-lg mx-2">home</Link>
-            <Link to='/about' className="font-thin text-lg mx-2">about</Link>
-            <Link to='/service' className="font-thin text-lg mx-2">service</Link>
-            <Link to='/gallery' className="font-thin text-lg mx-2">gallery</Link>
-            <Link to='/contact' className="font-thin text-lg mx-2">contact</Link>
+            <Link to='/' onClick={()=>window.scrollTo({top: 0, behavior: 'smooth'})} className="font-thin text-lg mx-2">home</Link>
+            <Link to='/about' onClick={()=>window.scrollTo({top: 0, behavior: 'smooth'})} className="font-thin text-lg mx-2">about</Link>
+            <Link to='/service' onClick={()=>window.scrollTo({top: 0, behavior: 'smooth'})} className="font-thin text-lg mx-2">service</Link>
+            <Link to='/gallery' onClick={()=>window.scrollTo({top: 0, behavior: 'smooth'})} className="font-thin text-lg mx-2">gallery</Link>
+            <Link to='/contact' onClick={()=>window.scrollTo({top: 0, behavior: 'smooth'})} className="font-thin text-lg mx-2">contact</Link>
           </ul>
         </div>
         </div>

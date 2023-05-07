@@ -1,17 +1,18 @@
 if (sessionStorage.getItem('visit') === null) {
   // New visit and pageview
   updateCounter('type=visit-pageview');
-} 
+} else {
+  // Pageview
+  updateCounter('type=pageview');
+}
 
 function updateCounter(type) {
-
-  fetch('http://127.0.0.1:3002/api?'+type) // Dynamic request with URL parameter
+  fetch('http://localhost:5000/viewcount?'+type) 
     .then(res => res.json())
     .then(data => {
-       // Display visits to user
-       console.log(data.count);
+      console.log("Page Count"+data.pageviews) 
+      console.log("Visit Count"+data.visits) 
     })
-
 }
 
 sessionStorage.setItem('visit', 'x');

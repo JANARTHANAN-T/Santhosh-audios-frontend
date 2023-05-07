@@ -17,7 +17,9 @@ function Navbar({floatingNav}) {
     <div className="absolute z-10 w-[100%] ">
     <nav className="flex justify-between items-center px-5 md:px-10 h-20   ">
       <div className="w-full">
+      <a href="https://santhoshaudios.in/">
         <img src={logo} className='h-16' alt="Santhosh Audios" />
+      </a>
       </div>
       <ul className="hidden font-medium md:flex items-center">
         <NavLink to="/" className="p-4 hover:cursor-pointer hover:text-[#312e81] ">HOME</NavLink>

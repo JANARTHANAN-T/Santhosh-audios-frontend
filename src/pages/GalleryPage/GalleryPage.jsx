@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import TopNavBtn from "../../components/TopNavBtn/TopNavBtn";
 import axios from "axios";
@@ -11,7 +11,7 @@ function GalleryPage() {
   const [showImage, setShowImage] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const getImage = async () => {
       await axios
         .get(
@@ -54,7 +54,7 @@ function GalleryPage() {
         })}
       </div>
       {(category.length===0 && images?.length!==0) &&
-      <div className="flex justify-center items-center m-10 mb-0 h-52 border-2 rounded-md border-slate-400">Select the Category</div>
+      <div className="flex justify-center items-center m-10 mb-0 h-52 border-2 rounded-md border-slate-400">Click the button above to select the Category</div>
       }
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 p-10">
         {category?.map((ele, index) => {

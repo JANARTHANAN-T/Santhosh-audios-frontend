@@ -4,6 +4,7 @@ import AllRoutes from "./AllRoutes";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import 'react-toastify/dist/ReactToastify.css';
+import data from './asserts/content/content.json'
 
 
 function App() {
@@ -11,8 +12,8 @@ function App() {
     <div>
    <Router>
       <Navbar />
-      <AllRoutes />
-      <Footer />
+      <AllRoutes data={data} />
+      <Footer data={data.Contact} />
    </Router>
 
     </div>

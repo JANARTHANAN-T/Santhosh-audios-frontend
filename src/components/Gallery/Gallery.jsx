@@ -23,7 +23,6 @@ function Gallery() {
           setImage(
           galleryImages?.filter(e=>e.category_name==='General')[0].data
           )
-          // console.log(galleryImages?.filter(e=>e.category_name==='General'));
           console.log(images);
         })
         .catch((err) => {

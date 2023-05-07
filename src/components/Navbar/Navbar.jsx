@@ -19,12 +19,13 @@ function Navbar({floatingNav}) {
       <div className="w-full">
         <img src={logo} className='h-16' alt="Santhosh Audios" />
       </div>
-      <ul className="hidden font-medium md:flex">
+      <ul className="hidden font-medium md:flex items-center">
         <NavLink to="/" className="p-4 hover:cursor-pointer hover:text-[#312e81] ">HOME</NavLink>
         <NavLink to="/about" className="p-4 hover:cursor-pointer hover:text-[#312e81] ">ABOUT</NavLink>
         <NavLink to="/service" className="p-4 hover:cursor-pointer hover:text-[#312e81] ">SERVICE</NavLink>
         <NavLink to="/gallery" className="p-4 hover:cursor-pointer hover:text-[#312e81] ">GALLERY</NavLink>
         <NavLink to="/contact" className="p-4 hover:cursor-pointer hover:text-[#312e81] ">CONTACT</NavLink>
+        <NavLink to="/quotation" className="p-4 hover:cursor-pointer text-[#39359f] font-bold ">Apply for Quotation</NavLink>
       </ul>
       {!nav &&
       <div className="md:hidden">
@@ -56,6 +57,8 @@ function Navbar({floatingNav}) {
           <li className="py-3 hover:cursor-pointer hover:text-[#176b9c]"><NavLink to="/service">SERVICE</NavLink></li>
           <li className="py-3 hover:cursor-pointer hover:text-[#176b9c]"><NavLink to="/gallery">GALLERY</NavLink></li>
           <li className="py-3 hover:cursor-pointer hover:text-[#176b9c]"><NavLink to="/contact">CONTACT</NavLink></li>
+          <li className="py-3 hover:cursor-pointer hover:text-[#176b9c] font-bold"><NavLink to="/quotation">Apply for Quotation</NavLink></li>
+       
         </ul>
         <div className="absolute top-6 right-2" >
           <svg
@@ -86,7 +89,7 @@ function Navbar({floatingNav}) {
       <div className="w-full">
         <img src={logo} className='h-16' alt="Santhosh Audios" />
       </div>
-      <ul className="hidden font-medium md:flex">
+      <ul className="hidden font-medium md:flex items-center">
         <NavLink to="/" className="p-4 hover:cursor-pointer hover:text-[#312e81] ">HOME</NavLink>
         <NavLink to="/about" className="p-4 hover:cursor-pointer hover:text-[#312e81] ">ABOUT</NavLink>
         <NavLink to="/service" className="p-4 hover:cursor-pointer hover:text-[#312e81] ">SERVICE</NavLink>

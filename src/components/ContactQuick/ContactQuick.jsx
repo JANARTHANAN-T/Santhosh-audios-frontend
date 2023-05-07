@@ -6,7 +6,7 @@ import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 
 
-function ContactQuick() {
+function ContactQuick({data}) {
   const [name,setName]=useState('')
   const [email,setEmail]=useState('')
   const [mobile,setMobile]=useState('')
@@ -171,12 +171,12 @@ function ContactQuick() {
         <div className="grid grid-cols-1">
           <div className="m-6 mb-0 p-6">
             <p className="font-semibold tracking-tight text-gray-900 sm:text-3xl mb-10">
-              React us on
+              Reach us on
             </p>
             <div className="grid grid-cols-3 gap-10 items-center">
-            <a href = "mailto: santhoshaudios@gmail.com" target="_blank" rel="noreferrer"  className="lg:p-6 border hover:drop-shadow-xl hover:scale-105 transition-transform duration-200 flex justify-center"><img src={gmail} alt="gmail" className="h-16" /></a>
-            <a href="https://wa.me/+919976208183" target="_blank" rel="noopener noreferrer" className="lg:p-6 border hover:drop-shadow-xl hover:scale-105 transition-transform duration-200 flex justify-center"><img src={whatsapp} alt="whatsapp" className="h-16" /></a>
-            <a href="https://www.instagram.com/santhosh_audios/" target="_blank" rel="noreferrer" className="lg:p-6 border hover:drop-shadow-xl hover:scale-105 transition-transform duration-200 flex justify-center"><img src={instagram} alt="instagram" className=" h-16 " /></a>
+            <a href ={`mailto: ${data.Email1}`} target="_blank" rel="noreferrer"  className="lg:p-6 border hover:drop-shadow-xl hover:scale-105 transition-transform duration-200 flex justify-center"><img src={gmail} alt="gmail" className="h-16" /></a>
+            <a href={`https://wa.me/${data.WhatsApp1}`} target="_blank" rel="noopener noreferrer" className="lg:p-6 border hover:drop-shadow-xl hover:scale-105 transition-transform duration-200 flex justify-center"><img src={whatsapp} alt="whatsapp" className="h-16" /></a>
+            <a href={`https://www.instagram.com/${data.Instagram}/`} target="_blank" rel="noreferrer" className="lg:p-6 border hover:drop-shadow-xl hover:scale-105 transition-transform duration-200 flex justify-center"><img src={instagram} alt="instagram" className=" h-16 " /></a>
             </div>
           </div>
           <div className="m-6 mt-0 row-span-3">

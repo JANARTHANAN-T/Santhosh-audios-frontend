@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../asserts/images/logo.png";
 import { Link } from "react-router-dom";
 
-function Footer() {
+function Footer({data}) {
   return (
     <div className="bg-indigo-50">
       <div className="grid grid-cols-1 lg:grid-cols-3 justify-between items-center py-5 border-gray-300 border-b-2">
@@ -27,11 +27,11 @@ function Footer() {
           <pre className="my-5 text-center">
             SANTHOSH AUDIOS,
             <br />
-            307/2, Perundurai Road,
+            {data.AddressStreet}
             <br />
-            Near URC Nagar State Bank,
+           `{data.AddressArea}
             <br />
-            Erode - 638012.
+            {data.AddressDistrict}
           </pre>
         </div>
         </div>

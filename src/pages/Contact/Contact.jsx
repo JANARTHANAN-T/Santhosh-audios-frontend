@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import axios from "axios";
 import React,{useState} from "react";
 
-function Contact() {
+function Contact({data}) {
   const [name,setName]=useState('')
   const [email,setEmail]=useState('')
   const [mobile,setMobile]=useState('')
@@ -51,28 +51,28 @@ function Contact() {
         <div className="col-span-3  gap-10 grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1">
           <div className=" shadow-lg p-5">
             <div className="text-lg font-medium my-2">Gmail (Primary)</div>
-            <div className="text-blue-600 text-lg">santhoshaudios@gmail.com</div>
+            <div className="text-blue-600 text-lg">{data.Email1}</div>
             <a href = "mailto: santhoshaudios@gmail.com" target="_blank" rel="noreferrer"><div className="text-lg my-2 decoration-1 underline hover:text-blue-600">Click to Mail</div></a>
           </div>
           <div className=" shadow-lg p-5">
             <div className="text-lg font-medium my-2">Gmail (Secondary)</div>
-            <div className="text-blue-600 text-lg">santhoshvg60@gmail.com</div>
+            <div className="text-blue-600 text-lg">{data.Email2}</div>
             <a href = "mailto: santhoshvg60@gmail.com" target="_blank" rel="noreferrer"><div className="text-lg my-2 decoration-1 underline hover:text-blue-600">Click to Mail</div></a>          
           </div>
           <div className=" shadow-lg p-5">
             <div className="text-lg font-medium my-2">Instagram</div>
-            <div className="text-blue-600 text-lg">santhosh_audios</div>
+            <div className="text-blue-600 text-lg">{data.Instagram}</div>
             <a href="https://www.instagram.com/santhosh_audios/" target="_blank" rel="noreferrer"><div className="text-lg my-2 decoration-1 underline hover:text-blue-600">Link</div></a>
           </div>
           <div className=" shadow-lg p-5">
             <div className="text-lg font-medium my-2">WhatsApp (Primary)</div>
-            <div className="text-blue-600 text-lg">+91-99762-08183</div>
+            <div className="text-blue-600 text-lg">{data.WhatsApp1}</div>
             <a href="https://wa.me/+919976208183" target="_blank" rel="noopener noreferrer"><div className="text-lg my-2 decoration-1 underline hover:text-blue-600">Click to Chat</div></a>
           </div>
           <div className=" shadow-lg p-5">
             <div className="text-lg font-medium my-2">WhatsApp (Secondary)</div>
-            <div className="text-blue-600 text-lg">+91-85261-0828</div>
-            <a href="https://wa.me/+91852610828" target="_blank" rel="noopener noreferrer"><div className="text-lg my-2 decoration-1 underline hover:text-blue-600">Click to Chat</div></a>
+            <div className="text-blue-600 text-lg">{data.WhatsApp2}</div>
+            <a href="https://wa.me/+918526108281" target="_blank" rel="noopener noreferrer"><div className="text-lg my-2 decoration-1 underline hover:text-blue-600">Click to Chat</div></a>
           </div>
         </div>
       </div>
@@ -82,9 +82,9 @@ function Contact() {
           <div className=" shadow-lg p-5">
             <div className="text-blue-600 text-lg">Santhosh Audios</div>
             <div className="text-lg my-2">
-              307/2, Perundurai Road,<br/>
-              Near URC Nagar State Bank,<br/>
-              Erode - 638012.
+              {data.AddressStreet}<br/>
+              {data.AddressArea}<br/>
+              {data.AddressDistrict}
             </div>
           </div>
         </div>

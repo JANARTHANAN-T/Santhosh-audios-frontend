@@ -57,16 +57,20 @@ function Quotation() {
     {title:"Cut Mat/Noodule",check:false},
     {title:"Stearing Grip",check:false},
   ]
+  const checked=[]
 
   const [name,setName]=useState('')
   const [email,setEmail]=useState('')
   const [mobile,setMobile]=useState('')
   const [totalBudget,setTotalBudget]=useState('')
 
-  const handleChecks =(element,index)=>{
-     fields.splice(index,1)
-     var newField={title:element.title,check:!element.check}
-     fields.push(newField)
+  const handleChecks =(title)=>{
+    if(checked.includes(title)){
+      const index=checked.indexOf(title)
+      checked.splice(index,1)
+    }else{
+      checked.push(title)
+    }
   }
   const submit=async(e)=>{
     e.preventDefault()
@@ -77,7 +81,7 @@ function Quotation() {
     await axios({
         method: 'post',
         url: 'http://192.168.29.207:5000/message',
-        data:{name,email,phonenumber:mobile,materials:fields,totalBudget,isquotation:true},
+        data:{name,email,phonenumber:mobile,materials:checked,totalBudget,isquotation:true},
       }).then(async(response) => {
         if(response.data.status){
           try {
@@ -129,10 +133,10 @@ function Quotation() {
           <div className="mx-24 drop-shadow-lg  flex flex-wrap justify-center ">
           {fields.map((e,i)=>{
             return(
-            <div className='flex m-5' onClick={()=>handleChecks(e,i)} key={i}>
+            <label className='flex m-5' onClick={()=>handleChecks(e.title)} key={i}>
             <input type="checkbox"/>
             <div className='m-2'>{e.title}</div>
-            </div>
+            </label>
 
             )
           })}
